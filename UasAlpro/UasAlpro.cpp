@@ -75,6 +75,8 @@ int main()
 			break;
 		
 		case 2:
+			cout<< search;
+			break;
 			
 	}
 
