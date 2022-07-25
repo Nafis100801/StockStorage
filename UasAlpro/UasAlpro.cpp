@@ -37,6 +37,15 @@ brg lok[5];
 brg temp;
 
 int n, i, b, cari, ada;
+int jumlahRekursif(int x, int a){
+    cout << "Berapa jumlah pengunjung: ";
+    cin >> a;
+    if (x==0){
+        return a;
+    }else{
+        return a + jumlahRekursif(x-1,a);
+    }
+}
 
 int main()
 
@@ -44,7 +53,7 @@ int main()
 
 	cout << "\t\t" << "==================================================================================" << endl;
 
-	cout << "\t\t" << "|                   PROGRAM SORTING DAN SEARCHING BARANG                  |" << endl;
+	cout << "\t\t" << "|                      	DATA PENJUALAN PLN MOBILE RB BLITAR     	             |" << endl;
 
 	cout << "\t\t" << "==================================================================================" << endl;
 
@@ -68,7 +77,7 @@ int main()
 
 		cout << "\t\t\t\t\t\t" << "Input Stock Barang : "; cin >> barang[i].stock;
 
-		cout << "\t\t\t\t\t\t" << "Input Lokasi Barang : "; cin >> gets(barang[i].lokasi);
+		cout << "\t\t\t\t\t\t" << "Katalog : "; cin >> gets(barang[i].lokasi);
 
 		cout << endl;
 
@@ -211,7 +220,13 @@ int main()
 		cout << "Data Tidak ditemukan" << endl;
 
 	}
-
+	
+    cout << "Masukkan berapa bulan: ";
+    if(cari>0){
+        cout << jumlahRekursif(cari-1, 0);
+    }else{
+        return 0;
+    }
 	getch();
 }
 
